@@ -203,10 +203,10 @@ class TextClassificationSystem:
 
 def main() :
     configuration()
-    train_file_path = '/kaggle/input/nlp-getting-started/train.csv'
-    test_file_path = '/kaggle/input/nlp-getting-started/test.csv'
-    validation_file_path = '/kaggle/working/validation_data.csv'
-    output_file_path = '/kaggle/working/sample_submission.csv'
+    train_file_path = 'train.csv'
+    test_file_path = 'test.csv'
+    validation_file_path = 'validation_data.csv'
+    output_file_path = 'output/sample_submission.csv'
     system = TextClassificationSystem(train_file_path, test_file_path, validation_file_path, output_file_path)
     system.train(epochs=30)
     metrics = system.evaluate()
